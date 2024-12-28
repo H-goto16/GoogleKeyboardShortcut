@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Google Search Navigator",
+  "version": "1.0",
+  "description": "Navigate Google search results with keyboard shortcuts.",
+  "permissions": ["scripting"],
+  "host_permissions": ["https://www.google.com/search*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/search*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}
