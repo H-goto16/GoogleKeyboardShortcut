@@ -7,7 +7,9 @@ const SELECTED_CLASS = 'selected-result';
  */
 const navigateLinks = (direction) => {
   const links = Array.from(document.querySelectorAll('a'));
-  const searchResults = links.filter((link) => link.closest('.tF2Cxc')); // 検索結果リンクのみ
+
+  // 検索結果リンク（.tF2Cxc クラス内）だけをフィルタリング
+  const searchResults = links.filter((link) => link.closest('.tF2Cxc'));
 
   if (searchResults.length === 0) return;
 
@@ -77,5 +79,4 @@ document.addEventListener('keydown', (e) => {
       break;
   }
 });
-
 
